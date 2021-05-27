@@ -2,35 +2,55 @@
   <div class="imgBox">
     <img src="../../../assets/imgBox.jpg" />
   </div>
-
   <div class="contentBox">
     <div class="formBox">
       <h2>Login</h2>
-      <form>
+      <form (ngSubmit)="login()">
         <div class="inputBox">
           <span>Username</span>
-          <input type="text" />
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="Enter email"
+            required
+          />
         </div>
         <div class="inputBox">
           <span>Password</span>
-          <input type="password" />
-        </div>
-        <div class="remember">
-          <label><input type="checkbox" name="" /> Remember me</label>
+          <input
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            placeholder="Enter Password"
+            required
+          />
         </div>
         <div class="inputBox">
           <input type="submit" value="Sign in" />
         </div>
         <div class="inputBox">
-          <p>Don't have an account? <a href="index2.html">Sign up</a></p>
+          <p>
+            Don't have an account?
+            <a href="#" routerLink="/register">Sign up</a>
+          </p>
         </div>
       </form>
-      <h3>Login with social media</h3>
+      <!--  <h3>Login with social media</h3>
       <ul class="social_buttons">
         <li><i class="fab fa-facebook"></i></li>
         <li><i class="fab fa-twitter"></i></li>
         <li><i class="fab fa-instagram"></i></li>
-      </ul>
+      </ul> -->
+      <div class="form-group">
+        <p *ngIf="errorMessage.length > 0" class="text-danger">
+          {{ errorMessage }}
+        </p>
+
+        <p *ngIf="error.message.length > 0" class="text-danger">
+          {{ error.message }}
+        </p>
+      </div>
     </div>
   </div>
 </section>

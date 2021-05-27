@@ -5,22 +5,45 @@
   <div class="contentBox">
     <div class="formBox">
       <h2>Sign Up</h2>
-      <form>
+      <form (ngSubmit)="register()">
         <div class="inputBox">
           <span>Email</span>
-          <input type="email" placeholder="Give us your e-mail" />
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="Give us your e-mail"
+            required
+          />
         </div>
         <div class="inputBox">
           <span>Password</span>
-          <input type="password" placeholder="And your password" />
+          <input
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            placeholder="And your password"
+            required
+          />
         </div>
         <div class="inputBox">
           <input type="submit" value="Sign up" />
         </div>
         <div class="inputBox">
-          <p>Have an account? <a href="index.html">Sign in</a></p>
+          <p>Have an account? <a href="#" routerLink="/login">Sign in</a></p>
         </div>
       </form>
+      <div class="form-group">
+        <p *ngIf="errorMessage.length > 0" class="text-danger">
+          {{ errorMessage }}
+        </p>
+        <p *ngIf="error.message.length > 0" class="text-danger">
+          {{ error }}
+        </p>
+        <p *ngIf="message.length > 0" class="text-info">
+          {{ message }}
+        </p>
+      </div>
     </div>
   </div>
 </section>
