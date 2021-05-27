@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-auth-2021": {
+      "hosting": {
+        "angular-project": [
+          "angular-auth-2021"
+        ]
+      }
+    }
+  }
+}
