@@ -23,6 +23,8 @@
     "firebase": "^7.0 || ^8.0",
     "font-awesome": "^4.7.0",
     "rxjs": "~6.6.0",
+    "themify-icons": "^1.0.0",
+    "ti-icons": "^0.1.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
