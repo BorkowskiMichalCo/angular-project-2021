@@ -13,9 +13,11 @@ import { LoginComponent } from './login/login/login.component';
 import { RegisterComponent } from './login/register/register.component';
 import { InfoComponent } from './login/info/info.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MainCardsComponent } from './components/main-cards/main-cards.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, InfoComponent, SidebarComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, InfoComponent, SidebarComponent, HeaderComponent, MainCardsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
