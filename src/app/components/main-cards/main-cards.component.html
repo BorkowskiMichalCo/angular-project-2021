@@ -45,13 +45,11 @@
               </thead>
               <tbody>
                 <tr *ngFor="let name of names">
-                  <td>{{ name.item.id }}</td>
-                  <td>{{ name.item.market_cap_rank }}</td>
-                  <td>{{ name.item.price_btc }}</td>
-                  <td><img src="{{ name.item.small }}" alt="" /></td>
-                  <td>
-                    {{ name.item.symbol }}
-                  </td>
+                  <td>{{ name.name }}</td>
+                  <td>{{ name.symbol }}</td>
+                  <td>{{ name.current_price }}$</td>
+                  <td>{{ name.market_cap_rank }}</td>
+                  <td><img src="{{ name.image }}" alt="" /></td>
                 </tr>
               </tbody>
             </table>

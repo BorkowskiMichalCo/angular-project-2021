@@ -9,7 +9,7 @@ export class CryptoService {
   constructor(private http: HttpClient) {}
 
   getName(): Observable<any> {
-    const url = 'https://api.coingecko.com/api/v3/search/trending';
+    const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false';
     return this.http.get<any>(url);
   }
 }

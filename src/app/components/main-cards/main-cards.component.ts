@@ -13,8 +13,8 @@ export class MainCardsComponent implements OnInit {
 
   ngOnInit(): void {
     this.name.getName().subscribe(data => {
-      console.log(data);
-      this.names = data.coins;
+      console.log(...data);
+      this.names = data;
     });
   }
 }
