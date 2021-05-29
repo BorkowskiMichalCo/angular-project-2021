@@ -31,30 +31,26 @@
     <section class="recent">
       <div class="activity-grid">
         <div class="activity-card">
-          <h3>Recent activity</h3>
+          <h3>Top trading search in CoinGecko</h3>
           <div class="table-responsive">
             <table>
               <thead>
                 <tr>
-                  <th>Project</th>
-                  <th>Start Date</th>
-                  <th>End Date</th>
-                  <th>Team</th>
-                  <th>Status</th>
+                  <th>Coin Name</th>
+                  <th>Place in Ranking</th>
+                  <th>Value of BTC</th>
+                  <th>Icon</th>
+                  <th>Symbol</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>App Development</td>
-                  <td>15 Aug, 2020</td>
-                  <td>22 Aug, 2020</td>
+                <tr *ngFor="let name of names">
+                  <td>{{ name.item.id }}</td>
+                  <td>{{ name.item.market_cap_rank }}</td>
+                  <td>{{ name.item.price_btc }}</td>
+                  <td><img src="{{ name.item.small }}" alt="" /></td>
                   <td>
-                    <div class="img-1"></div>
-                    <div class="img-2"></div>
-                    <div class="img-3"></div>
-                  </td>
-                  <td>
-                    <span class="badge success"> Succes </span>
+                    {{ name.item.symbol }}
                   </td>
                 </tr>
               </tbody>

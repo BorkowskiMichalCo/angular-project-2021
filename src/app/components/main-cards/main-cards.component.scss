@@ -199,6 +199,11 @@ tbody tr:nth-child(even) {
   }
 }
 
+.ww {
+  font-size: 30px;
+  color: #fff;
+}
+
 @media only screen and (max-width: 600px) {
   .dash-cards {
     grid-template-columns: 100%;
